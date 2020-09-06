@@ -1,0 +1,91 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Day 2 Assignment Batch 7.ipynb",
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "BGfgLk7s1TyH",
+        "colab_type": "text"
+      },
+      "source": [
+        "# Q.)Print the first ArmStrong number in the range of 1042000 to 702648265 and exit the loop as soon as you encounter the first armstrong number. Use while loop."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9nCtpq5x1j0F",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "202cc874-d0a9-42c4-b272-b2d156df52e6"
+      },
+      "source": [
+        "print(\"Submission Of Assignment 1 Day 4 Done By Shejan N. Virani\")\n",
+        "print(\"www.shejanbro1.0@gmail.com\")"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Submission Of Assignment 1 Day 4 Done By Shejan N. Virani\n",
+            "www.shejanbro1.0@gmail.com\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qV9X_vfy0JgF",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "9a6e45f3-d8df-4933-aee8-843eb8cfde79"
+      },
+      "source": [
+        "lower = 1042000\n",
+        "upper = 702648265\n",
+        "for num in range(lower, upper + 1):\n",
+        "   # order of number\n",
+        "   order = len(str(num))\n",
+        "   sum = 0\n",
+        "   temp = num\n",
+        "   while temp > 0:\n",
+        "       digit = temp % 10\n",
+        "       sum += digit ** order\n",
+        "       temp //= 10\n",
+        "   if num == sum:\n",
+        "       print(num)\n",
+        "       break"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1741725\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
